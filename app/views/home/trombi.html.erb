@@ -5,21 +5,19 @@
       <h1>Bienvenue sur The Hacking Project</h1>
         <p><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></p>
         <h2>Trombi</h2>
-        <table style= "width:100%">
-<!--           <tr>
-            <th> Username </th>
-            <th> Bio </th>
-            <th> Slack handle </th>
-            <th> Picture </th>
-          </tr> -->
-          <% @users.each do |user| %>
-            <td> 
+
+        <div id="wrapper">
+        <% @users.each do |user| %> 
+            <div id="box">
+            
               <span class="picture"><%= image_tag user.image_url unless user.image_url == nil %></span><br>
               <span class="item"> Username: <%= user.username %></span><br>
-              <span class="item">Bio: <%= user.bio %></span><br>
-              <span class="item"> Slack: <%= user.slack_handle %><br>
-            </td>
-          <%end%>
+              <span class="item"> Slack: <%= user.slack_handle %></span><br>
+              <span class="item_bio">Bio: <%= user.bio %></span><br>
+            </div>
+            <%end%>
+        </div>
+          
     <%else%>
       <h1>Welcome to the Hacking Trombi</h1>
       <p>Please <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Log in", new_user_session_path %> to view the trombi</p>

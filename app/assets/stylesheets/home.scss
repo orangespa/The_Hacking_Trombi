@@ -103,3 +103,19 @@ aside {
     margin-left: 60px;
   }
 }
+
+#wrapper {
+  width: 100%;
+}
+
+#box {
+  height: 250px;
+  width: 25%;
+  float:left;
+}
+
+.item {
+width: 100%;
+overflow: hidden;
+text-overflow: ellipsis;
+}
