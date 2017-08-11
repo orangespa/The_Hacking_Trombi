@@ -398,7 +398,7 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap-will_paginate (= 1.0.0)
   byebug (= 9.0.6)
-  carrierwave (= 1.1.0)
+  carrierwave (~> 1.0)
   coffee-rails (= 4.2.2)
   devise
   faker (= 1.7.3)

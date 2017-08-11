@@ -44,7 +44,7 @@ gem 'bootstrap-sass' #Bootstrap
 
 gem 'omniauth-facebook' #Authentication via Facebook
 
-gem 'carrierwave',             '1.1.0' #Way to upload files from Ruby applications
+gem 'carrierwave', '~> 1.0' #Way to upload files from Ruby applications
 
 gem 'mini_magick',             '4.7.0' #
 

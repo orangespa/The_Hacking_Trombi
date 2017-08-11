@@ -18,6 +18,11 @@
     <%= f.text_field :slack_handle %>
   </div>
 
+   <div class="image">
+    <%= f.label :image, "Upload your picture" %><br />
+    <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

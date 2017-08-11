@@ -7,7 +7,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :username,           null: false, default: ""
       t.text :bio
       t.string :slack_handle
-      t.string :picture
+      t.string :image
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at

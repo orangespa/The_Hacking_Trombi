@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170811110156) do
     t.string "username", default: "", null: false
     t.text "bio"
     t.string "slack_handle"
-    t.string "picture"
+    t.string "image"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
