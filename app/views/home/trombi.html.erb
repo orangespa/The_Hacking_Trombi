@@ -4,6 +4,22 @@
     <%if user_signed_in? %>
       <h1>Bienvenue sur The Hacking Project</h1>
         <p><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></p>
+        <table style= "width:100%">
+          <tr>
+            <th> Username </th>
+            <th> Bio </th>
+            <th> Slack handle </th>
+            <th> Picture </th>
+          </tr>
+          <% @users.each do |user| %>
+          <tr>
+            <td> <span class="item"><%= user.username %></span></td>
+            <td> <span class="item"><%= user.bio %></span> </td>
+            <td> <span class="item"><%= user.slack_handle %></span></td>
+            <td><span class="picture"><%= user.picture %></span></td>
+            </tr>
+          <%end%>
+      </table>
     <%else%>
       <h1>Welcome to the Hacking Trombi</h1>
       <p>Please <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Log in", new_user_session_path %> to view the trombi</p>
