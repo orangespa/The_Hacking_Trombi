@@ -2,13 +2,8 @@
   <div class="col-md-6 col-md-offset-3">
 
     <%if user_signed_in? %>
-      <!-- <h1>Welcome to the Hacking Trombi</h1>
-       <% if @feed_items.any? %>
-        <ol class="gossips">
-          <%= render @feed_items %>
-        </ol>
-        <%= will_paginate @feed_items %>
-      <% end %> -->
+      <h1>Bienvenue sur The Hacking Project</h1>
+        <p><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %></p>
     <%else%>
       <h1>Welcome to the Hacking Trombi</h1>
       <p>Please <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Log in", new_user_session_path %> to view the trombi</p>
